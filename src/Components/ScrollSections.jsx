@@ -53,6 +53,7 @@ const sections = [
 export default function ScrollSections() {
   const [current, setCurrent] = useState(0);
   const isScrolling = useRef(false);
+  const touchStartY = useRef(0);
 
   useEffect(() => {
     const handleWheel = (e) => {
@@ -88,12 +89,38 @@ export default function ScrollSections() {
       }, 1000);
     };
 
+    const handleTouchStart = (e) => {
+      touchStartY.current = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e) => {
+      if (isScrolling.current) return;
+      const deltaY = touchStartY.current - e.changedTouches[0].clientY;
+      if (Math.abs(deltaY) < 30) return;
+
+      isScrolling.current = true;
+
+      if (deltaY > 0) {
+        setCurrent((prev) => Math.min(prev + 1, sections.length - 1));
+      } else {
+        setCurrent((prev) => Math.max(prev - 1, 0));
+      }
+
+      setTimeout(() => {
+        isScrolling.current = false;
+      }, 1000);
+    };
+
     window.addEventListener("wheel", handleWheel);
     window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchend", handleTouchEnd);
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
     };
   }, []);
 
