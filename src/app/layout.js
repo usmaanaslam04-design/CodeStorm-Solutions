@@ -1,5 +1,4 @@
 import "./globals.css";
-
 import { Poppins, Montserrat, Playfair_Display, K2D, Libre_Baskerville, Tinos } from "next/font/google";
 
 const poppins = Poppins({
@@ -41,13 +40,15 @@ const tinos = Tinos({
 export const metadata = {
   title: "CodeStorm Solutions",
   description: "This is my Next.js website",
+  icons: {
+    icon: "/main-logo.png",
+  },
 };
 
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${montserrat.variable} ${playfair.variable} ${k2d.variable} ${libreBaskerville.variable} ${tinos.variable}`}>
-        
         {children}
       </body>
     </html>
