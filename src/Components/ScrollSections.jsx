@@ -6,7 +6,7 @@ import Image from "next/image";
 import styles from "./ScrollSections.module.css";
 import Aurora from "@/Components/Aurora";
 import Navbar from "@/Components/Navbar";
-import TopBanner from "@/components/TopBanner";
+import TopBanner from "@/Components/TopBanner";
 import LogoLoop from "@/Components/LogoLoop";
 import logo from "@/Images/main-logo.png";
 import topComma from "@/Images/top-comma.png";
