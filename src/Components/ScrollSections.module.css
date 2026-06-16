@@ -783,7 +783,7 @@
   .dots { right: 6px; gap: 8px; }
   .dot { width: 8px; height: 8px; }
   .projectsWrapper { margin-top: 100px; gap: 10px; padding: 10px 12px; }
-  .projectCard { padding: 14px 16px; }
+  .projectCard { padding: 14px 16px; margin-top: -10px; }
   .projectName { font-size: 0.9rem; }
   .projectDesc { font-size: 0.75rem; }
   .projectLink { font-size: 0.7rem; }
