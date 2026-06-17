@@ -128,7 +128,7 @@
   letter-spacing: 0.5px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
   .heroLogo { width: 180px; height: 180px; margin-bottom: 120px; }
   .brandText { margin-top: -160px; }
   .brandName { font-size: 3.5rem; }
@@ -164,4 +164,19 @@
   .tagline { font-size: 0.7rem; letter-spacing: 1px; }
   .description { font-size: 0.9rem; padding: 0 12px; }
   .glassBtn, .plainBtn { font-size: 0.85rem; padding: 10px 24px; }
+}
+
+@media (max-height: 820px) {
+  .heroSection {
+    justify-content: flex-start;
+    padding-top: 150px;
+  }
+
+  .heroLogo {
+    margin-bottom: 60px;
+  }
+
+  .brandText {
+    margin-top: -60px;
+  }
 }
