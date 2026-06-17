@@ -1,0 +1,184 @@
+.footerSection {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 40px;
+  background: #000;
+  margin-top: 10px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+
+.auroraBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.footerWrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerGlass {
+  width: 100%;
+  max-width: 1100px;
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(178, 96, 50, 0.3);
+  border-radius: 20px;
+  padding: 40px 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0 10px rgba(178, 96, 50, 0.4),
+    0 0 20px rgba(178, 96, 50, 0.3),
+    0 0 40px rgba(178, 96, 50, 0.15);
+}
+
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  flex: 1;
+}
+
+.footerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  flex: 1.5;
+  text-align: right;
+}
+
+.footerHeading {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #b26032;
+  margin: 0;
+  text-align: right;
+}
+
+.footerNav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.footerNavLink {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #b26032;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.footerNavLink:hover {
+  opacity: 0.7;
+}
+
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.footerContactText {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  color: rgba(178, 96, 50, 0.8);
+  margin: 0;
+}
+
+.footerSocials {
+  display: flex;
+  gap: 12px;
+}
+
+.footerSocialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(178, 96, 50, 0.1);
+  border: 1px solid rgba(178, 96, 50, 0.3);
+  color: #b26032;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footerSocialIcon:hover {
+  background: rgba(178, 96, 50, 0.2);
+  box-shadow: 0 0 10px rgba(178, 96, 50, 0.4);
+}
+
+.footerBottom {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(178, 96, 50, 0.2);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: rgba(178, 96, 50, 0.6);
+}
+
+@media (max-width: 1100px) {
+  .footerGlass { padding: 30px 40px; }
+  .footerHeading { font-size: 2rem; }
+}
+
+@media (max-width: 992px) {
+  .footerGlass { padding: 28px 30px; gap: 24px; }
+  .footerNavLink { font-size: 0.85rem; }
+  .footerHeading { font-size: 1.8rem; }
+}
+
+@media (max-width: 768px) {
+  .footerSection { padding: 60px 16px 30px; }
+  .footerGlass { flex-direction: column; align-items: center; padding: 24px 20px; gap: 20px; }
+  .footerLeft { align-items: center; }
+  .footerRight { align-items: center; }
+  .footerHeading { font-size: 1.6rem; text-align: center; }
+  .footerNav { justify-content: center; }
+  .footerContact { align-items: center; }
+  .footerNavLink { font-size: 0.8rem; }
+  .footerContactText { font-size: 0.8rem; text-align: center; }
+  .footerBottom { font-size: 0.75rem; }
+}
+
+@media (max-width: 500px) {
+  .footerSection { padding: 50px 12px 24px; }
+  .footerGlass { padding: 18px 14px; gap: 16px; }
+  .footerHeading { font-size: 1.3rem; }
+  .footerNavLink { font-size: 0.75rem; }
+  .footerContactText { font-size: 0.72rem; }
+  .footerSocialIcon { width: 34px; height: 34px; font-size: 14px; }
+  .footerBottom { font-size: 0.65rem; margin-top: 12px; padding-top: 12px; }
+}

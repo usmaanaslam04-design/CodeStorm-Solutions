@@ -6,13 +6,19 @@ import logo from "@/Images/main-logo.png";
 import { motion } from "framer-motion";
 
 const navLinks = [
-  { name: "Home",     section: 0 },
-  { name: "About",    section: 1 },
-  { name: "Services", section: 2 },
-  { name: "Contact",  section: 5 },
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Contact", href: "#contact" },
 ];
 
-const Navbar = ({ setCurrent }) => {
+const Navbar = () => {
+  const handleClick = (e, href) => {
+    e.preventDefault();
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <motion.nav
       className={styles.wrapper}
@@ -60,8 +66,8 @@ const Navbar = ({ setCurrent }) => {
           {navLinks.map((link, index) => (
             <motion.a
               key={link.name}
-              href="#"
-              onClick={(e) => { e.preventDefault(); setCurrent(link.section); }}
+              href={link.href}
+              onClick={(e) => handleClick(e, link.href)}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}

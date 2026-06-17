@@ -1,0 +1,167 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  background: #000;
+  border-radius: 0 0 20px 20px;
+}
+
+.auroraBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.logoWrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.heroLogo {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 150px;
+}
+
+.brandText {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: -200px;
+}
+
+.brandName {
+  font-family: "Montserrat", sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  color: #b26032;
+  margin: 0;
+  line-height: 1;
+}
+
+.brandSub {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #b26032;
+  letter-spacing: 6px;
+  margin-left: 25px;
+}
+
+.tagline {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #b26032;
+  letter-spacing: 4px;
+  margin: 16px 0 0 0;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.description {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #b26032;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.85;
+  max-width: 1000px;
+  margin-top: 30px;
+}
+
+.buttonRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.glassBtn {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #b26032;
+  padding: 12px 32px;
+  border-radius: 12px;
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(178, 96, 50, 0.3);
+  box-shadow:
+    0 0 10px rgba(178, 96, 50, 0.4),
+    0 0 20px rgba(178, 96, 50, 0.3),
+    0 0 40px rgba(178, 96, 50, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.glassBtn:hover {
+  box-shadow:
+    0 0 15px rgba(178, 96, 50, 0.6),
+    0 0 30px rgba(178, 96, 50, 0.4),
+    0 0 60px rgba(178, 96, 50, 0.2);
+  transform: scale(1.05);
+}
+
+.plainBtn {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #b26032;
+  text-decoration: none;
+  padding: 12px 32px;
+  border-radius: 12px;
+  border: 1px solid rgba(178, 96, 50, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 1100px) {
+  .heroLogo { width: 180px; height: 180px; margin-bottom: 120px; }
+  .brandText { margin-top: -160px; }
+  .brandName { font-size: 3.5rem; }
+  .brandSub { font-size: 1.6rem; letter-spacing: 5px; margin-left: 15px; }
+  .tagline { font-size: 0.85rem; letter-spacing: 3px; }
+  .description { font-size: 1.2rem; max-width: 800px; }
+  .glassBtn, .plainBtn { font-size: 0.9rem; padding: 11px 26px; }
+}
+
+@media (max-width: 992px) {
+  .heroLogo { width: 220px; height: 220px; margin-bottom: 160px; }
+  .brandName { font-size: 3.5rem; }
+  .brandSub { font-size: 1.5rem; }
+  .description { font-size: 1.2rem; max-width: 700px; }
+}
+
+@media (max-width: 768px) {
+  .heroLogo { width: 180px; height: 180px; margin-bottom: 120px; }
+  .brandText { margin-top: -160px; }
+  .brandName { font-size: 2.8rem; }
+  .brandSub { font-size: 1.2rem; letter-spacing: 4px; }
+  .tagline { font-size: 0.8rem; letter-spacing: 2px; margin-left: 0; }
+  .description { font-size: 1rem; max-width: 500px; padding: 0 16px; }
+  .buttonRow { flex-direction: column; gap: 14px; }
+  .glassBtn, .plainBtn { width: 100%; max-width: 300px; text-align: center; }
+}
+
+@media (max-width: 500px) {
+  .heroLogo { width: 140px; height: 140px; margin-bottom: 100px; }
+  .brandText { margin-top: -120px; }
+  .brandName { font-size: 2rem; }
+  .brandSub { font-size: 1rem; letter-spacing: 3px; margin-left: 0; }
+  .tagline { font-size: 0.7rem; letter-spacing: 1px; }
+  .description { font-size: 0.9rem; padding: 0 12px; }
+  .glassBtn, .plainBtn { font-size: 0.85rem; padding: 10px 24px; }
+}
