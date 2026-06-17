@@ -6,27 +6,35 @@ import styles from "./FooterSection.module.css";
 import footerImage from "@/Images/footer-image.png";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import Ferrofluid from "./Ferrofluid";
+import EmberGlow from "./EmberGlow";
+import useLowPower from "./useLowPower";
 
 export default function FooterSection() {
+  const isLowPower = useLowPower();
+
   return (
     <footer className={styles.footerSection}>
       <div className={styles.auroraBg}>
-        <Ferrofluid
-          colors={["#000000", "#b26032", "#b26032"]}
-          speed={0.5}
-          scale={1.6}
-          turbulence={1}
-          fluidity={0.1}
-          rimWidth={0.2}
-          sharpness={2.5}
-          shimmer={1.5}
-          glow={2}
-          flowDirection="down"
-          opacity={1}
-          mouseInteraction={false}
-          mouseStrength={1}
-          mouseRadius={0.35}
-        />
+        {isLowPower ? (
+          <EmberGlow />
+        ) : (
+          <Ferrofluid
+            colors={["#000000", "#b26032", "#b26032"]}
+            speed={0.5}
+            scale={1.6}
+            turbulence={1}
+            fluidity={0.1}
+            rimWidth={0.2}
+            sharpness={2.5}
+            shimmer={1.5}
+            glow={2}
+            flowDirection="down"
+            opacity={1}
+            mouseInteraction={false}
+            mouseStrength={1}
+            mouseRadius={0.35}
+          />
+        )}
       </div>
 
       <div className={styles.footerWrapper}>

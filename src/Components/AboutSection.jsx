@@ -6,27 +6,35 @@ import styles from "./AboutSection.module.css";
 import topComma from "@/Images/top-comma.png";
 import bottomComma from "@/Images/bottom-comma.png";
 import Ferrofluid from "./Ferrofluid";
+import EmberGlow from "./EmberGlow";
+import useLowPower from "./useLowPower";
 
 export default function AboutSection() {
+  const isLowPower = useLowPower();
+
   return (
     <section className={styles.aboutSection}>
       <div className={styles.auroraBg}>
-        <Ferrofluid
-          colors={["#000000", "#b26032", "#b26032"]}
-          speed={0.5}
-          scale={1.6}
-          turbulence={1}
-          fluidity={0.1}
-          rimWidth={0.2}
-          sharpness={2.5}
-          shimmer={1.5}
-          glow={2}
-          flowDirection="down"
-          opacity={1}
-          mouseInteraction={false}
-          mouseStrength={1}
-          mouseRadius={0.35}
-        />
+        {isLowPower ? (
+          <EmberGlow />
+        ) : (
+          <Ferrofluid
+            colors={["#000000", "#b26032", "#b26032"]}
+            speed={0.5}
+            scale={1.6}
+            turbulence={1}
+            fluidity={0.1}
+            rimWidth={0.2}
+            sharpness={2.5}
+            shimmer={1.5}
+            glow={2}
+            flowDirection="down"
+            opacity={1}
+            mouseInteraction={false}
+            mouseStrength={1}
+            mouseRadius={0.35}
+          />
+        )}
       </div>
 
       <div className={styles.noteCard}>

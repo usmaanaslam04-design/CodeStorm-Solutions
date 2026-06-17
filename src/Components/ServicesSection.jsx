@@ -5,27 +5,35 @@ import styles from "./ServicesSection.module.css";
 import { MdOutlineDesignServices, MdPhoneIphone } from "react-icons/md";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
 import Ferrofluid from "./Ferrofluid";
+import EmberGlow from "./EmberGlow";
+import useLowPower from "./useLowPower";
 
 export default function ServicesSection() {
+  const isLowPower = useLowPower();
+
   return (
     <section className={styles.servicesSection}>
       <div className={styles.auroraBg}>
-        <Ferrofluid
-          colors={["#000000", "#b26032", "#b26032"]}
-          speed={0.5}
-          scale={1.6}
-          turbulence={1}
-          fluidity={0.1}
-          rimWidth={0.2}
-          sharpness={2.5}
-          shimmer={1.5}
-          glow={2}
-          flowDirection="down"
-          opacity={1}
-          mouseInteraction={false}
-          mouseStrength={1}
-          mouseRadius={0.35}
-        />
+        {isLowPower ? (
+          <EmberGlow />
+        ) : (
+          <Ferrofluid
+            colors={["#000000", "#b26032", "#b26032"]}
+            speed={0.5}
+            scale={1.6}
+            turbulence={1}
+            fluidity={0.1}
+            rimWidth={0.2}
+            sharpness={2.5}
+            shimmer={1.5}
+            glow={2}
+            flowDirection="down"
+            opacity={1}
+            mouseInteraction={false}
+            mouseStrength={1}
+            mouseRadius={0.35}
+          />
+        )}
       </div>
 
       <div className={styles.servicesWrapper}>

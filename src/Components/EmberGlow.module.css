@@ -1,0 +1,63 @@
+.emberGlow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #000000;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.5;
+  will-change: transform;
+}
+
+.blob1 {
+  width: 55vw;
+  height: 55vw;
+  left: -15%;
+  top: -15%;
+  background: radial-gradient(circle, #b26032 0%, transparent 70%);
+  animation: drift1 20s ease-in-out infinite;
+}
+
+.blob2 {
+  width: 40vw;
+  height: 40vw;
+  right: -10%;
+  top: 25%;
+  background: radial-gradient(circle, #b26032 0%, transparent 70%);
+  animation: drift2 24s ease-in-out infinite;
+}
+
+.blob3 {
+  width: 45vw;
+  height: 45vw;
+  left: 25%;
+  bottom: -20%;
+  background: radial-gradient(circle, #c9743f 0%, transparent 70%);
+  animation: drift3 28s ease-in-out infinite;
+}
+
+@keyframes drift1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(6%, 12%) scale(1.15); }
+}
+
+@keyframes drift2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-8%, 8%) scale(1.1); }
+}
+
+@keyframes drift3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(5%, -10%) scale(1.2); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob1, .blob2, .blob3 {
+    animation: none;
+  }
+}
