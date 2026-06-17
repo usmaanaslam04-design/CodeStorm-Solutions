@@ -1,0 +1,351 @@
+.showcaseSection {
+  position: relative;
+  width: 100%;
+  padding: 120px 20px;
+  background: #000;
+  border-radius: 20px;
+  margin-top: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auroraBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.servicesWrapper,
+.techWrapper,
+.projectsWrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.techWrapper,
+.projectsWrapper {
+  margin-top: 140px;
+}
+
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #b26032;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.subheading {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(178, 96, 50, 0.75);
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Services */
+.serviceCards {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.serviceCard {
+  flex: 1;
+  min-width: 260px;
+  max-width: 320px;
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(178, 96, 50, 0.3);
+  border-radius: 20px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0 10px rgba(178, 96, 50, 0.4),
+    0 0 20px rgba(178, 96, 50, 0.3),
+    0 0 40px rgba(178, 96, 50, 0.15);
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.6),
+    0 0 15px rgba(178, 96, 50, 0.6),
+    0 0 30px rgba(178, 96, 50, 0.4),
+    0 0 60px rgba(178, 96, 50, 0.2);
+}
+
+.serviceCardMiddle {
+  transform: translateY(-12px);
+}
+
+.serviceCardMiddle:hover {
+  transform: translateY(-20px);
+}
+
+.serviceIcon {
+  font-size: 3rem;
+  color: #b26032;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(178, 96, 50, 0.1);
+  border: 1px solid rgba(178, 96, 50, 0.3);
+}
+
+.serviceName {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #b26032;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.serviceDesc {
+  font-family: "Playfair Display", serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: rgba(178, 96, 50, 0.75);
+  font-style: italic;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Tech */
+.techGlassCard {
+  width: 100%;
+  max-width: 1100px;
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(178, 96, 50, 0.3);
+  border-radius: 20px;
+  padding: 40px 20px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0 10px rgba(178, 96, 50, 0.4),
+    0 0 20px rgba(178, 96, 50, 0.3),
+    0 0 40px rgba(178, 96, 50, 0.15);
+}
+
+.loopWrapper {
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+  color: #b26032;
+  font-size: 4.5rem;
+}
+
+.loopWrapper :global(ul) {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.loopWrapper :global(li) {
+  list-style: none !important;
+}
+
+/* Projects */
+.projectCards {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 30px;
+}
+
+.projectCard {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(178, 96, 50, 0.3);
+  border-radius: 20px;
+  padding: 20px 24px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0 10px rgba(178, 96, 50, 0.4),
+    0 0 20px rgba(178, 96, 50, 0.3),
+    0 0 40px rgba(178, 96, 50, 0.15);
+}
+
+.projectCard:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.6),
+    0 0 15px rgba(178, 96, 50, 0.6),
+    0 0 30px rgba(178, 96, 50, 0.4),
+    0 0 60px rgba(178, 96, 50, 0.2);
+}
+
+.projectLogoBox {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.projectName {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #b26032;
+  margin: 0;
+}
+
+.projectDesc {
+  font-family: "Playfair Display", serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(178, 96, 50, 0.75);
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.projectLink {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #b26032;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+@media (max-width: 1100px) {
+  .showcaseSection { padding: 100px 20px; }
+  .techWrapper,
+  .projectsWrapper { margin-top: 120px; }
+  .heading { font-size: 2rem; }
+  .subheading { font-size: 1.2rem; }
+  .serviceCard { padding: 28px 22px; }
+  .serviceIcon { font-size: 2.5rem; width: 60px; height: 60px; }
+  .serviceName { font-size: 1rem; }
+  .serviceDesc { font-size: 0.82rem; }
+  .loopWrapper { height: 100px; font-size: 3rem; }
+  .projectCards { gap: 16px; }
+  .projectName { font-size: 1rem; }
+  .projectDesc { font-size: 0.85rem; }
+}
+
+@media (max-width: 992px) {
+  .showcaseSection { padding: 90px 20px; }
+  .techWrapper,
+  .projectsWrapper { margin-top: 100px; }
+  .heading { font-size: 2rem; }
+  .serviceCards { gap: 16px; }
+  .serviceCard { min-width: 200px; padding: 24px 18px; }
+  .serviceCardMiddle:hover { transform: translateY(-20px); }
+  .loopWrapper { height: 100px; font-size: 2.5rem; }
+  .projectCards { flex-direction: row; align-items: stretch; justify-content: center; }
+  .projectCard { max-width: 46%; padding: 16px 20px; }
+  .projectLogoBox { height: 50px; }
+  .projectName { font-size: 1rem; }
+  .projectDesc { font-size: 0.8rem; }
+  .projectLink { font-size: 0.75rem; }
+}
+
+@media (max-width: 768px) {
+  .showcaseSection { padding: 60px 16px; }
+  .techWrapper,
+  .projectsWrapper { margin-top: 70px; }
+  .heading { font-size: 1.8rem; }
+  .subheading { font-size: 0.95rem; }
+  .serviceCards {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+  }
+  .serviceCard {
+    flex: none;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px 24px;
+    gap: 12px;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+  .serviceCardMiddle { transform: translateY(0); }
+  .serviceCardMiddle:hover { transform: translateY(-4px); }
+  .serviceIcon { font-size: 1.6rem; width: 48px; height: 48px; flex-shrink: 0; }
+  .serviceName { font-size: 0.95rem; letter-spacing: 0.5px; }
+  .serviceDesc { font-size: 0.8rem; line-height: 1.5; }
+  .loopWrapper { height: 100px; font-size: 2.2rem; }
+  .projectCards { flex-direction: column; align-items: center; }
+  .projectCard { max-width: 100%; padding: 14px 18px; }
+  .projectLogoBox { height: 45px; }
+  .projectName { font-size: 0.95rem; }
+  .projectDesc { font-size: 0.8rem; }
+  .projectLink { font-size: 0.75rem; }
+}
+
+@media (max-width: 500px) {
+  .showcaseSection { padding: 50px 12px; }
+  .techWrapper,
+  .projectsWrapper { margin-top: 50px; }
+  .heading { font-size: 1.4rem; }
+  .subheading { font-size: 0.85rem; }
+  .serviceCards { gap: 10px; }
+  .serviceCard { padding: 16px 18px; gap: 10px; }
+  .serviceIcon { font-size: 1.4rem; width: 42px; height: 42px; }
+  .serviceName { font-size: 0.88rem; }
+  .serviceDesc { font-size: 0.75rem; }
+  .loopWrapper { height: 100px; font-size: 1.8rem; }
+  .projectCard { padding: 14px 16px; }
+  .projectName { font-size: 0.9rem; }
+  .projectDesc { font-size: 0.75rem; }
+  .projectLink { font-size: 0.7rem; }
+  .projectLogoBox { height: 40px; }
+}
