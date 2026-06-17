@@ -1,0 +1,130 @@
+.techSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px;
+  background: #000;
+  margin-top: 10px;
+  border-radius: 20px;
+
+}
+
+.techWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #b26032;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.subheading {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(178, 96, 50, 0.75);
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+}
+
+.techGlassCard {
+  width: 100%;
+  max-width: 1100px;
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(178, 96, 50, 0.3);
+  border-radius: 20px;
+  padding: 40px 20px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0 10px rgba(178, 96, 50, 0.4),
+    0 0 20px rgba(178, 96, 50, 0.3),
+    0 0 40px rgba(178, 96, 50, 0.15);
+}
+
+.loopWrapper {
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+  color: #b26032;
+  font-size: 4.5rem;
+}
+
+.loopWrapper :global(ul) {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.loopWrapper :global(li) {
+  list-style: none !important;
+}
+
+.techSection {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px;
+  background: #000;
+  overflow: hidden;
+}
+
+.auroraBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.techWrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+@media (max-width: 1100px) {
+  .techSection { padding: 100px 20px; }
+  .heading { font-size: 2rem; }
+  .subheading { font-size: 1.2rem; }
+  .loopWrapper { height: 100px; font-size: 3rem; }
+}
+
+@media (max-width: 992px) {
+  .techSection { padding: 90px 20px; }
+  .heading { font-size: 2rem; }
+  .loopWrapper { height: 100px; font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .techSection { padding: 60px 16px; }
+  .heading { font-size: 1.8rem; }
+  .subheading { font-size: 0.95rem; }
+  .loopWrapper { height: 100px; font-size: 2.2rem; }
+}
+
+@media (max-width: 500px) {
+  .techSection { padding: 50px 12px; }
+  .heading { font-size: 1.4rem; }
+  .subheading { font-size: 0.85rem; }
+  .loopWrapper { height: 100px; font-size: 1.8rem; }
+}

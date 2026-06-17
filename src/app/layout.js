@@ -39,7 +39,7 @@ const tinos = Tinos({
 
 export const metadata = {
   title: "CodeStorm Solutions",
-  description: "This is my Next.js website",
+  description: "Web & Mobile App Solutions",
   icons: {
     icon: "/main-logo.png",
   },
