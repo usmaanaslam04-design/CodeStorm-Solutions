@@ -5,31 +5,35 @@ import Image from "next/image";
 import styles from "./ProjectsSection.module.css";
 import dentalLogo from "@/Images/dental.png";
 import cuspidooLogo from "@/Images/cuspidoo.png";
-import LiquidEther from "./LiquidEther";
+import Grainient from "./Grainient";
 
 export default function ProjectsSection() {
   return (
     <section className={styles.projectsSection}>
       <div className={styles.auroraBg}>
-        <LiquidEther
-          colors={["#D4783A", "#B26032", "#7A2808"]}
-          mouseForce={20}
-          cursorSize={100}
-          isViscous
-          viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          resolution={0.5}
-          isBounce={false}
-          autoDemo
-          autoSpeed={0.5}
-          autoIntensity={2.2}
-          takeoverDuration={0.25}
-          autoResumeDelay={3000}
-          autoRampDuration={0.6}
-          color0="#b26032"
+        <Grainient
           color1="#000000"
-          color2="#b26032"
+          color2="#000000"
+          color3="#b26035"
+          timeSpeed={0.25}
+          colorBalance={-0.1}
+          warpStrength={1}
+          warpFrequency={3.4}
+          warpSpeed={2}
+          warpAmplitude={50}
+          blendAngle={0}
+          blendSoftness={0.05}
+          rotationAmount={500}
+          noiseScale={2}
+          grainAmount={0}
+          grainScale={2}
+          grainAnimated={false}
+          contrast={0.35}
+          gamma={0.6}
+          saturation={1}
+          centerX={0}
+          centerY={0}
+          zoom={0.9}
         />
       </div>
 

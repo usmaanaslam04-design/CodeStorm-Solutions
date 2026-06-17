@@ -170,6 +170,8 @@ export default function Aurora(props) {
     ctn.appendChild(gl.canvas);
 
     let animateId = 0;
+    let isVisible = true;
+
     const update = t => {
       animateId = requestAnimationFrame(update);
       const { time = t * 0.01, speed = 1.0 } = propsRef.current;
@@ -183,13 +185,50 @@ export default function Aurora(props) {
       });
       renderer.render({ scene: mesh });
     };
-    animateId = requestAnimationFrame(update);
 
+    function startLoop() {
+      if (animateId) return;
+      animateId = requestAnimationFrame(update);
+    }
+
+    function stopLoop() {
+      if (animateId) {
+        cancelAnimationFrame(animateId);
+        animateId = 0;
+      }
+    }
+
+    startLoop();
     resize();
 
+    const io = new IntersectionObserver(
+      entries => {
+        const entry = entries[0];
+        isVisible = entry.isIntersecting && entry.intersectionRatio > 0;
+        if (isVisible && !document.hidden) {
+          startLoop();
+        } else {
+          stopLoop();
+        }
+      },
+      { threshold: [0, 0.01, 0.1] }
+    );
+    io.observe(ctn);
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopLoop();
+      } else if (isVisible) {
+        startLoop();
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
     return () => {
-      cancelAnimationFrame(animateId);
+      stopLoop();
       window.removeEventListener('resize', resize);
+      io.disconnect();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       if (ctn && gl.canvas.parentNode === ctn) {
         ctn.removeChild(gl.canvas);
       }
