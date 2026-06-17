@@ -5,25 +5,17 @@ import Image from "next/image";
 import styles from "./HeroSection.module.css";
 import Aurora from "@/Components/Aurora";
 import logo from "@/Images/main-logo.png";
-import EmberGlow from "./EmberGlow";
-import useLowPower from "./useLowPower";
 
 export default function HeroSection() {
-  const isLowPower = useLowPower();
-
   return (
     <section className={styles.heroSection}>
       <div className={styles.auroraBg}>
-        {isLowPower ? (
-          <EmberGlow />
-        ) : (
-          <Aurora
-            colorStops={["#b26032", "#3d1a08", "#e08840"]}
-            blend={0.5}
-            amplitude={1.0}
-            speed={1}
-          />
-        )}
+        <Aurora
+          colorStops={["#b26032", "#3d1a08", "#e08840"]}
+          blend={0.5}
+          amplitude={1.0}
+          speed={1}
+        />
       </div>
 
       <motion.div
