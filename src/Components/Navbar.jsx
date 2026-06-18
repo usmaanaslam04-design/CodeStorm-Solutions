@@ -1,22 +1,35 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 import logo from "@/Images/main-logo.png";
 import { motion } from "framer-motion";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "#home", type: "scroll" },
+  { name: "About", href: "#about", type: "scroll" },
+  { name: "Services", href: "#services", type: "scroll" },
+  { name: "Contact", href: "/contact", type: "page" },
 ];
 
 const Navbar = () => {
-  const handleClick = (e, href) => {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const handleClick = (e, link) => {
+    if (link.type === "page") return; // normal navigation, no interception
+
+    if (!isHome) return; // not on homepage, let it navigate to "/" + hash normally
+
     e.preventDefault();
-    const el = document.querySelector(href);
+    const el = document.querySelector(link.href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const getHref = (link) => {
+    if (link.type === "page") return link.href;
+    return isHome ? link.href : `/${link.href}`;
   };
 
   return (
@@ -66,8 +79,8 @@ const Navbar = () => {
           {navLinks.map((link, index) => (
             <motion.a
               key={link.name}
-              href={link.href}
-              onClick={(e) => handleClick(e, link.href)}
+              href={getHref(link)}
+              onClick={(e) => handleClick(e, link)}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}

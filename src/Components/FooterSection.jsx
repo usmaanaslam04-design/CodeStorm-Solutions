@@ -74,16 +74,16 @@ export default function FooterSection() {
               <a href="#services" className={styles.footerNavLink}>
                 Services
               </a>
-              <a href="#contact" className={styles.footerNavLink}>
+              <a href="contact" className={styles.footerNavLink}>
                 Contact
               </a>
             </div>
 
             <div className={styles.footerContact}>
               <p className={styles.footerContactText}>
-                info@codestormsolutions.com
+                codestormsolutions@gmail.com
               </p>
-              <p className={styles.footerContactText}>+92 333 8189912</p>
+              <p className={styles.footerContactText}>+92 320 4491976</p>
             </div>
 
             <div className={styles.footerSocials}>

@@ -28,9 +28,9 @@ const Home = () => {
       <TechSection />
       <ProjectsSection />
 
-      <div id="contact">
+   
         <FooterSection />
-      </div>
+     
     </>
   );
 };

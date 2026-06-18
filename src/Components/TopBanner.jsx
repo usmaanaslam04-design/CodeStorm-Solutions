@@ -10,7 +10,7 @@ function TopBanner() {
       <div className="left-section">
         <a href="#" className="email-link" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
           <Mail size={16} />
-          info@cuspidoo.com
+          codestormsolutions@gmail.com
         </a>
       </div>
 

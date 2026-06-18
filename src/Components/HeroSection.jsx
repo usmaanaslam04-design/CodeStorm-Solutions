@@ -2,11 +2,14 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import styles from "./HeroSection.module.css";
 import Aurora from "@/Components/Aurora";
 import logo from "@/Images/main-logo.png";
 
 export default function HeroSection() {
+  const router = useRouter();
+
   return (
     <section className={styles.heroSection}>
       <div className={styles.auroraBg}>
@@ -60,9 +63,14 @@ export default function HeroSection() {
         </p>
 
         <div className={styles.buttonRow}>
-          <button className={styles.glassBtn}>Get Started</button>
+          <button
+            className={styles.glassBtn}
+            onClick={() => router.push("/contact")}
+          >
+            Get Started
+          </button>
           <a href="tel:+923338189912" className={styles.plainBtn}>
-            Contact Us : +92 333 8189912
+            Contact Us : +92 320 4491976
           </a>
         </div>
       </motion.div>
