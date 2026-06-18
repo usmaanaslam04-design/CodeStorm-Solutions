@@ -1,9 +1,14 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request) {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      console.error("RESEND_API_KEY is not set");
+      return Response.json({ error: "Server email configuration missing" }, { status: 500 });
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     const { firstName, lastName, email, phone, message } = await request.json();
 
     if (!firstName || !lastName || !email || !message) {
