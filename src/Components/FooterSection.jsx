@@ -88,7 +88,7 @@ export default function FooterSection() {
 
             <div className={styles.footerSocials}>
               <motion.a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/codestormsolutions/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.footerSocialIcon}
@@ -99,7 +99,7 @@ export default function FooterSection() {
               </motion.a>
 
               <motion.a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/company/codestorm-solutions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.footerSocialIcon}

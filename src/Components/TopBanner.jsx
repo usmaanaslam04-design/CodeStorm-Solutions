@@ -18,9 +18,9 @@ function TopBanner() {
       <div className="right-section">
         
       
-        <a href="https://www.instagram.com/cuspidooinstruments?igsh=MmpkM2NhY25rNmZh" className="social-icon"><FaInstagram  /></a>
+        <a href="https://www.instagram.com/codestormsolutions/" className="social-icon"><FaInstagram  /></a>
   
-        <a href="https://www.linkedin.com/in/usman-cuspidoo-5b7b70373?utm_source=share_via&utm_content=profile&utm_medium=member_android" className="social-icon"><FaLinkedin  /></a>
+        <a href="https://www.linkedin.com/company/codestorm-solutions" className="social-icon"><FaLinkedin  /></a>
       </div>
 
     </div>
